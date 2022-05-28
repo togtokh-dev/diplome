@@ -1,0 +1,33 @@
+Сайн байна уу,
+
+ 
+
+QPay V2 тестийн холболтын болон системийн API мэдээллийг илгээж байна. 
+
+
+https://merchant-sandbox.qpay.mn/v2/auth/token 
+
+
+                                          i.    username: TEST_MERCHANT
+                                         ii.    password: 123456
+
+ 
+
+ INVOICE_CODE: TEST_INVOICE
+
+ 
+
+Тайлбар: Энэхүү API нь мерчантын динамик CPM, MPM хэлбэрээр төлбөр хүлээн авахад зориулагдсан. Энд гарах QR кодыг банкнуудын апп-с гадна бусад wallet-ууд уншина.
+
+ 
+
+Excel file password: 99179204
+
+ 
+
+Хүндэтгэсэн,
+
+Г.Ганзул
+
+88614450
+
