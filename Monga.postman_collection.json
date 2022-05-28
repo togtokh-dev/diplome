@@ -1,0 +1,1652 @@
+{
+	"info": {
+		"_postman_id": "f223153e-7096-4b3e-a887-071ebf72a934",
+		"name": "Monga",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16239992"
+	},
+	"item": [
+		{
+			"name": "Танилт нэвтрэлт",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"email\":\"togtokh.dev@gmail.com\",\n    \"password\":\"Gonjiw3218@\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"user_name\":\"togtokh.dev\",\n    \"email\":\"togtokh.dev@gmail.com\",\n    \"year\":2000,\n    \"password\":\"Gonjiw3218@\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Promo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/auth/promo",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"promo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Username Checker",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/username/togtokh.dev",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"username",
+								"togtokh.dev"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password #1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"togtokh.dev@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/forgot/mail",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"forgot",
+								"mail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password #2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\":\"520384\",\n    \"forgot_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFuWjhDcmtHTyIsImVtYWlsIjoidG9ndG9raC5kZXZAZ21haWwuY29tIiwicGFzcyI6NTIwMzg0LCJpYXQiOjE2NDQwNzI3MDYsImV4cCI6MTY0NjY2NDcwNn0.-D445aw7nigkvFcMtKHhgiURaBDmwUShsUbfLt6tW4s\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/forgot/code",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"forgot",
+								"code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password #3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":\"89893218\",\n    \"code\":\"520384\",\n    \"forgot_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFuWjhDcmtHTyIsImVtYWlsIjoidG9ndG9raC5kZXZAZ21haWwuY29tIiwicGFzcyI6NTIwMzg0LCJpYXQiOjE2NDQwNzI3MDYsImV4cCI6MTY0NjY2NDcwNn0.-D445aw7nigkvFcMtKHhgiURaBDmwUShsUbfLt6tW4s\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/forgot/password",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"forgot",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mail Validation  #1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/auth/validation/togtokh.dev@gmail.com/mail",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"validation",
+								"togtokh.dev@gmail.com",
+								"mail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mail Validation  #2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/auth/validation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3Rva2VuIjp7InR5cGUiOiJlbWFpbCIsImlkIjoiZUdZbEkwTXo5IiwiZW1haWwiOiJ0b2d0b2toLmRldkBnbWFpbC5jb20iLCJwYXNzIjo2MDIwMjd9LCJpYXQiOjE2NDgxMjY0NjMsImV4cCI6MTY1MDcxODQ2M30.V7re0G2teOAmpRloTY6JSXoGGDwWVSJ6ASzKEOzxASY",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"validation",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3Rva2VuIjp7InR5cGUiOiJlbWFpbCIsImlkIjoiZUdZbEkwTXo5IiwiZW1haWwiOiJ0b2d0b2toLmRldkBnbWFpbC5jb20iLCJwYXNzIjo2MDIwMjd9LCJpYXQiOjE2NDgxMjY0NjMsImV4cCI6MTY1MDcxODQ2M30.V7re0G2teOAmpRloTY6JSXoGGDwWVSJ6ASzKEOzxASY"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Үйлчилгээ",
+			"item": [
+				{
+					"name": "Pages",
+					"item": [
+						{
+							"name": "Миний дагасан хуудас",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/pages/followed",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pages",
+										"followed"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Миний хуудас",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/pages/my",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pages",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Бүх хуудас",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/pages/?sort=-created_date&page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pages",
+										""
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-created_date"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Хуудас төрлөөрөө",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/pages/hoby/type?sort=-created_date&page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pages",
+										"hoby",
+										"type"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-created_date"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Хуудасны мэдээлэл",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/pages/flhO_hswl/about",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pages",
+										"flhO_hswl",
+										"about"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "List",
+					"item": [
+						{
+							"name": "User in page admin,mod",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/list/eGYlI0Mz9/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"list",
+										"eGYlI0Mz9",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Page in project",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/list/HPhQlBubp/project?sort=-created_date&page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"list",
+										"HPhQlBubp",
+										"project"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-created_date"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Project in chapter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/list/NaoGsBfj1/chapter?sort=chapter_order&page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"list",
+										"NaoGsBfj1",
+										"chapter"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "chapter_order"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Chapter in media",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/list/_t8Jvby70/media?sort=chapter_order&page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"list",
+										"_t8Jvby70",
+										"media"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "chapter_order"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All project",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/list/project?sort=-created_date&page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"list",
+										"project"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-created_date"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All chapter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/list/chapter?sort=-chapter_created_date&page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"list",
+										"chapter"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-chapter_created_date"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "page in chapters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/list/nANgiMiw9/chapter/page?sort=-chapter_created_date&page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"list",
+										"nANgiMiw9",
+										"chapter",
+										"page"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-chapter_created_date"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Last showed",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/list/last",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"list",
+										"last"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "их үзэлттэй",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/list/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Page",
+					"item": [
+						{
+							"name": "Хуудас үүсгэх",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \n    \"page_title\":\"Mongsa\",\n    \"page_username\":\"mongsa\",\n    \"page_role\":\"hobi\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Хуудас засах",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"page_icon\":\"2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/page/nf1w_iXG9",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"page",
+										"nf1w_iXG9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Хуудас устгах",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \n    \"page_title\":\"Mongsa\",\n    \"page_username\":\"mongsa\",\n    \"page_role\":\"hobi\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/page/OqoArWR5w",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"page",
+										"OqoArWR5w"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Хуудасны мэдээлэл",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/page/Noragami",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"page",
+										"Noragami"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ангилал",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/page/table/project_caticores",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"page",
+										"table",
+										"project_caticores"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Төрөл",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/page/table/project_type",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"page",
+										"table",
+										"project_type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Хуудасны role users мэдээлэл",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/page/role/CQuVHXm-q",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"page",
+										"role",
+										"CQuVHXm-q"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PAGE FOLLOW",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/page/follow/nf1w_iXG9",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"page",
+										"follow",
+										"nf1w_iXG9"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Project",
+					"item": [
+						{
+							"name": "Project  үүсгэх",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \n        \"project_title\": \"Ажилгүй дахин төрөлт\",\n        \"project_type\": 1,\n        \"project_caticores\": [1, 2, 3, 4, 5],\n        \"artist\": null,\n        \"author\": null,\n        \"project_chapters_count\": 10,\n        \"project_start_date\": \"2022-02-06 09:36:09\",\n        \"project_image\":\n          \"https://images-na.ssl-images-amazon.com/images/I/71OuA3MDoFS.jpg\",\n        \"project_description\": \"ene bol manga\",\n        \"old_limit\": 5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/project/nf1w_iXG9",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"project",
+										"nf1w_iXG9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Project засах",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n     \"old_limit\": 50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/project/Zlp1xs64d",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"project",
+										"Zlp1xs64d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Project устгах",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/project/xwJZjj5dn",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"project",
+										"xwJZjj5dn"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Project ийн мэдээлэл",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/project/Zlp1xs64d",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"project",
+										"Zlp1xs64d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Project   сэтгэгдэл үлдээх",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \n        \"text\": \"Ажилгүй дахин төрөлт\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/project/nf1w_iXG9/comment",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"project",
+										"nf1w_iXG9",
+										"comment"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Chapter",
+					"item": [
+						{
+							"name": "Chapter үүсгэх",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \n        \"chapter_name\": \"chatpter_zaa\",\n        \"chapter_order\": 1,\n        \"chapter_image\":\"https://kodansha.us/wp-content/uploads/2020/12/AllOut_017_cover-683x1024.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/chapter/Zlp1xs64d",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"chapter",
+										"Zlp1xs64d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Chapter засах",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n     \"chapter_order\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/chapter/6RobAc_3X",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"chapter",
+										"6RobAc_3X"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Chapter устгах",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \n    \"page_title\":\"Mongsa\",\n    \"page_username\":\"mongsa\",\n    \"page_role\":\"hobi\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/chapter/NPaP_xmlU",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"chapter",
+										"NPaP_xmlU"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Chapter ийн мэдээлэл",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/chapter/v-Ptt4wa0",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"chapter",
+										"v-Ptt4wa0"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Media",
+					"item": [
+						{
+							"name": "Үүсгэх",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/media/ArlV9KaYw",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"media",
+										"ArlV9KaYw"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Үүсгэх олоноор",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photos",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/media/ArlV9KaYw/all",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"media",
+										"ArlV9KaYw",
+										"all"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Media засах",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n     \"chapter_order\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/media/ArlV9KaYw",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"media",
+										"ArlV9KaYw"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Media устгах",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/media/ArlV9KaYw",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"media",
+										"ArlV9KaYw"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Media харах",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/media/ArlV9KaYw",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"media",
+										"ArlV9KaYw"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "QPAY",
+					"item": [
+						{
+							"name": "Хялбар үүсгэх",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pay/qpay/create_simple/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"qpay",
+										"create_simple",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Үүсгэх",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pay/qpay/create/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"qpay",
+										"create",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Хялбараар үүсгэх page",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pay/qpay/create_simple/page_id/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"qpay",
+										"create_simple",
+										"page_id",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "шалгах",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pay/qpay/pay_4pv15nr0l2zy92es",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"qpay",
+										"pay_4pv15nr0l2zy92es"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "MONPAY",
+					"item": [
+						{
+							"name": "Үүсгэх",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pay/monpay/create/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"monpay",
+										"create",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Шалгах",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pay/monpay/checker/pay_hl5fpo8l1gro36i",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"monpay",
+										"checker",
+										"pay_hl5fpo8l1gro36i"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Callback qr",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pay/monpay/callback/qr?uuid=qr6a6cde8c19a947a1bf47377e36bc4a3d&status=SUCCESS&txnId=5000000005044111&amount=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"monpay",
+										"callback",
+										"qr"
+									],
+									"query": [
+										{
+											"key": "uuid",
+											"value": "qr6a6cde8c19a947a1bf47377e36bc4a3d"
+										},
+										{
+											"key": "status",
+											"value": "SUCCESS"
+										},
+										{
+											"key": "txnId",
+											"value": "5000000005044111"
+										},
+										{
+											"key": "amount",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Callback deep",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pay/monpay/callback/deep?invoiceId=64&status=PAID&txnId=5000000005044111&amount=1500&info=success",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"monpay",
+										"callback",
+										"deep"
+									],
+									"query": [
+										{
+											"key": "invoiceId",
+											"value": "64"
+										},
+										{
+											"key": "status",
+											"value": "PAID"
+										},
+										{
+											"key": "txnId",
+											"value": "5000000005044111"
+										},
+										{
+											"key": "amount",
+											"value": "1500"
+										},
+										{
+											"key": "info",
+											"value": "success"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "KHAANBANK",
+					"item": [
+						{
+							"name": "Төлбөр төлсөнг шалгах хэрэглэгч",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pay/khaanbank/IPom060Rq/user",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"khaanbank",
+										"IPom060Rq",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Төлбөр төлсөнг шалгах хуудас",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pay/khaanbank/JqKcGww7K/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"khaanbank",
+										"JqKcGww7K",
+										"page"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PROMO",
+					"item": [
+						{
+							"name": "Промо шалгах",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\":\"\",\n    \"id\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/pay/promo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pay",
+										"promo"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Functions",
+			"item": [
+				{
+					"name": "File upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/a001/Desktop/MONGA/banner.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/page_media",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"page_media"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/count/0WZ-PrZ7u/project",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"count",
+								"0WZ-PrZ7u",
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Page data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/count/nf1w_iXG9/page",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"count",
+								"nf1w_iXG9",
+								"page"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/profile",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/verify_token",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"verify_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"user_name\":\"Monga\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/profile",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
